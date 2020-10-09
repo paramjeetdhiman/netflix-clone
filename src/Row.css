@@ -1,0 +1,25 @@
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  /* crop the image and zoom in img */
+  padding: 20px;
+}
+.row__posters::-webkit-scrollbar {
+  /* no scrollbar but keep the functionaslity */
+  display: none;
+}
+
+.row__poster {
+  object-fit: contain;
+  width: 100%;
+  /* keep the asect ratio */
+  max-height: 100px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+
+.row__poster:hover {
+  /* less amount  */
+  transform: scale(1.08);
+}
