@@ -25,14 +25,17 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
       <h2>{title}</h2>
       <div className="row__posters">
         {movies.map((movie) => (
+          // eslint-disable-next-line jsx-a11y/alt-text
           <img
             className={`row__poster ${isLargeRow && 'row__posterLarge'} `}
             key={movie.id}
-            // src={`${base_url}${
-            //   isLargeRow ? movie.poster_path : movie.backdrop_path
-            // }`}
-            src={`https://cdn.lifehack.org/wp-content/uploads/2017/08/04065343/0-5-1471762906514.jpg`}
-            alt={movie.name}
+            src={`${base_url}${
+              isLargeRow ? movie.poster_path : movie.backdrop_path
+            }`}
+
+            //dummy image
+            // src={`https://cdn.lifehack.org/wp-content/uploads/2017/08/04065343/0-5-1471762906514.jpg`}
+            // alt={movie.name}
           />
         ))}
       </div>
